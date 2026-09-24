@@ -1,0 +1,153 @@
+/* Universal Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+
+/* Header styles */
+header{
+    padding: 30px 20px; /* top and bottom. left and right */
+    margin: 20px;
+    box-shadow: 5px 4px rgba(5,18,17, 10);
+    border-radius: 20px;
+    background-color: bisque;
+    text-align: center;
+
+
+}
+
+header > h1{ /* combinator selector */
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: serif;
+    
+
+}
+
+header > small{ /* combinator selector */
+    font-size: large;
+    font-weight: bolder;
+    font-family: serif;
+    
+
+}
+
+/* Form Styles */
+#formContainer{
+    padding: 20px 20px; /* top and bottom. left and right */
+    margin: 20px;
+    box-shadow: 5px 4px rgba(5,18,17, 10);
+    border-radius: 20px;
+    background-color: rgb(255, 238, 218);
+
+}
+
+/* */
+#formContainer > #studentform >.input-fields > label{
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 5px;
+
+    
+
+}
+#formContainer > #studentform >.input-fields > input {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 10px;
+
+}
+
+#formContainer > #studentform >.input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#formContainer > #studentform :last-child > button {
+    margin-top: 0px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 100px;
+    background-color: rgb(126, 250, 132);
+    flex-grow: 1;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+    
+}
+
+#formContainer > #studentform :last-child{
+    display: flex;
+    justify-content: center;
+}
+
+/* Student List styles */
+
+#studentList .list-item{
+    padding: 20px; /* top and bottom. left and right */
+    box-shadow: 3px 3px rgba(5,18,17, 10);
+    border-radius: 20px;
+    background-color: rgb(254, 240, 225);
+
+}
+
+#studentList .list-item >h2{
+    font-size: large;
+    font-weight: bold;
+    
+
+}
+
+#studentList .list-item >p{
+    font-size: small;
+
+}
+
+.list-item > button{
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 100px;
+    background-color: rgb(252, 140, 140);
+    cursor: pointer;
+
+}
+
+/* for list container */
+#studentList{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 15px;
+}
+
+/* responsive design */
+/* mobile */
+@media (width <= 320px) {
+    #studentList > .list-item{
+        grid-column: span 12;
+        
+    }
+}
+
+/* tablet */
+@media (width > 320px) and (width <= 600px) {
+    #studentList > .list-item{
+        grid-column: span 6;
+        
+    }
+}
+
+/* tablet */
+@media (width <=1000px) {
+    #studentList > .list-item{
+        grid-column: span 2;
+        
+    }
+}
+
