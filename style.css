@@ -144,7 +144,7 @@ header > small{ /* combinator selector */
 }
 
 /* tablet */
-@media (width <=1000px) {
+@media (width >=1000px) {
     #studentList > .list-item{
         grid-column: span 2;
         
